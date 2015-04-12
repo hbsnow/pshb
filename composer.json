@@ -25,5 +25,6 @@
         "psr-4": {
             "Hbsnow\\Pshb\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
