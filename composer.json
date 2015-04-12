@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hbsnow\\Pshb": "src/"
+            "Hbsnow\\Pshb\\": "src/"
         }
     }
 }
