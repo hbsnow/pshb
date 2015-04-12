@@ -1,0 +1,29 @@
+{
+    "name": "takahashi-yuki/pshb",
+    "description": "A client library for PubSubHubBub",
+    "keywords": ["pubsubhubbub"],
+    "license": "MIT",
+    "support": {
+        "email": "yuki.4uing@gmail.com",
+        "issues": "https://github.com/takahashi-yuki/pshb/issues",
+        "source": "https://github.com/takahashi-yuki/pshb"
+    },
+    "authors": [
+        {
+            "name": "yuki",
+            "email": "yuki.4uing@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hbsnow\\Pshb": "src/"
+        }
+    }
+}
