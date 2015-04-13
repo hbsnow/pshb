@@ -36,30 +36,30 @@ class Publisher
                 'hub.url' => $url
             ];
 
-            return $this->post($this->hubUrl, http_build_query($post));
+            return $this->post(http_build_query($post));
         }
     }
 
     /**
      * cURLでPost
      *
-     * @param string $url
      * @param string $postfields
      */
-    private function post($url, $postfields)
+    private function post($postfields)
     {
         $options = [
-            CURLOPT_URL        => $url,
+            CURLOPT_URL        => $this->hubUrl,
             CURLOPT_POST       => true,
-            CURLOPT_POSTFIELDS => $postfields
+            CURLOPT_POSTFIELDS => $postfields,
         ];
 
         $ch = curl_init();
         curl_setopt_array($ch, $options);
+        curl_exec($ch);
         $info = curl_getinfo($ch);
         curl_close($ch);
 
-        if ($info['http_code'] === '204') {
+        if ($info['http_code'] === 204) {
             return true;
         }
 
